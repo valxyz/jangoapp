@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+
+  <link rel="stylesheet" href="{% static '../static/assets/style.css' %}">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="navbar">
+      <button class="sbutton" style="width: 96px; border: 1.5px solid #000000;">Sign in</button>
+    </div>
+
+    <div class="mainbody">
+
+      <div class="maintitle">
+        <h1 class="sh1"> Home </h1>
+      </div>
+
+      <div class="homebuttoncontainer">
+        <button class="sbutton" style="width: 96px;" onclick="location.href='/events/'" >Events</button>
+    
+        <button class="sbutton" style="width: 96px;" onclick="location.href='/login/'"> Login </button>
+      </div>
+
+    </div>
+
+    <div class="footerbar">
+      <a class="slink" href="url">About Events</a>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
