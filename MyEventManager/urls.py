@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include 
 from Events import views 
 
 urlpatterns = [
@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('login/', views.login, name='login'),
     path('events/', views.events, name='events'),
+    path('events/', include('Events.urls')),
 ]
 

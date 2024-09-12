@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizers</title>
+
+  <link rel="stylesheet" href="{% static '../static/assets/style.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css' %}">
+  <script src=" {% static '../static/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+
+</head>
+
+<body>
+
+  {% block content %}
+  <h2>List of Organizers</h2>
+  <ul>
+    {% for organizer in organizers %}
+    <li>{{ organizer.name }} - {{ organizer.email }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'organizer_create' %}" class="btn btn-primary">Add New Organizer</a>
+  {% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}My Event Manager{% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static '../static/assets/style.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css' %}">
+  <link rel="stylesheet" href="{% static '../static/assets/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css' %}">
+  <script src=" {% static '../static/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Event Manager</h1>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'events' %}">Events</a>
+      <a href="{% url 'login' %}">Login</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <p>&copy; 2024 My Event Manager</p>
+  </footer>
+</body>
+
+</html>
